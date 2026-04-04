@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yuly Marcela Beltrán — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<canvas id="nebula-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MBR<span>.DEV</span></div>
+
+  <ul class="nav-links">
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#experience">Experiencia</a></li>
+    <li><a href="#education">Formación</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+
+  <a href="CV-yuly-beltran.docx.pdf" download class="nav-cv">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/>
+    </svg>
+    Descargar CV
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="drawer">
+  <a href="#about"      onclick="closeDrawer()">Sobre mí</a>
+  <a href="#experience" onclick="closeDrawer()">Experiencia</a>
+  <a href="#education"  onclick="closeDrawer()">Formación</a>
+  <a href="#projects"   onclick="closeDrawer()">Proyectos</a>
+  <a href="#skills"     onclick="closeDrawer()">Skills</a>
+  <a href="#contact"    onclick="closeDrawer()">Contacto</a>
+  <a href="CV-Yuly-Beltran.docx" download class="drawer-cv" onclick="closeDrawer()">↓ Descargar CV</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    
+    <h1 class="hero-name">
+      <span class="line2">YULY MARCELA</span>
+      <span class="line1">BELTRÁN </span>
+    </h1>
+    <div class="hero-eyebrow"><div class="dot"></div>Full Stack Developer<div class="dot"></div></div>
+    <!--<p class="hero-role">// <span class="acc">Frontend Developer</span> &amp; Full Stack Junior</p> -->
+    <p class="hero-desc">Desarrolladora Frontend con experiencia en interfaces interactivas y trayectoria en el ecosistema SAP. Actualmente creciendo como Full Stack.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">VER PROYECTOS →</a>
+      <a href="#contact" class="btn-ghost">HABLEMOS</a>
+    </div>
+  </div>
+  <div class="hero-scroll"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-label">01 // SOBRE MÍ</div>
+  <h2 class="sec-title">QUIÉN SOY</h2>
+  <div class="about-grid fadein">
+    <div class="about-frame">
+      <div class="about-photo"><span class="about-photo-label">{ }</span></div>
+      <div class="corner tl"></div><div class="corner tr"></div>
+      <div class="corner bl"></div><div class="corner br"></div>
+    </div>
+    <div class="about-text">
+      <p>Desarrolladora Frontend con experiencia en el desarrollo de interfaces interactivas, mediante tecnologías 
+como HTML, CSS, JavaScript y Git. Mi trayectoria profesional comenzó en el ecosistema de SAP Ariba, 
+donde adquirí conocimientos en soluciones de compras y gestión de proveedores. </p>
+      <p>Participé como 
+analista en proyectos enfocados en SAP Ariba y SAP Fieldglass, lo que me ha permitido consolidar mi 
+experiencia en la implementación y soporte de estas plataformas, así como en la integración de 
+soluciones digitales orientadas a optimizar procesos de negocio. 
+tecnológicas eficientes.</p>
+      <p>Actualmente en el programa <strong style="color:var(--violet3)">Generation Colombia</strong> fortaleciendo mis habilidades como Full Stack Java Developer, con el objetivo de construir soluciones tecnológicas eficientes de punta a punta.</p>
+     <!-- <div class="about-stats">
+        <div class="stat"><div class="stat-n">6+</div><div class="stat-l">PROYECTOS</div></div>
+        <div class="stat"><div class="stat-n">2+</div><div class="stat-l">AÑOS EXP.</div></div>
+        <div class="stat"><div class="stat-n">5+</div><div class="stat-l">TECNOLOGÍAS</div></div>
+        <div class="stat"><div class="stat-n">∞</div><div class="stat-l">CURIOSIDAD</div></div>
+      </div>-->
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-label">02 // EXPERIENCIA</div>
+  <h2 class="sec-title">TRAYECTORIA</h2>
+  <div class="timeline fadein">
+    <div class="tline-item">
+      <div class="tline-date">Jul 2023<br> Abr 2025</div>
+      <div class="tline-body">
+        <div class="tline-company">Accenture Colombia · Bogotá</div>
+        <div class="tline-role">ANALISTA</div>
+        <ul class="tline-bullets">
+          <li>Migración y creación de contratos, gestión de accesos y roles de usuarios para garantizar la seguridad de los recursos del proyecto.</li>
+          <li>Gestión del proyecto mediante análisis de informes, organización de documentación para hitos de facturación y soporte nivel 1 vía tickets en Service Manager.</li>
+          <li>Creación de ChaRMs en SolMan para desarrollos y su gestión hacia ambientes de calidad y productivo, incluyendo cargue de documentación técnica y funcional.</li>
+          <li>Colaboración en modelo operativo de estabilización, transferencia de conocimiento (KT), elaboración de material para Train the Trainers y seguimiento de PBI y tareas en Azure DevOps.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="sec-label">03 // FORMACIÓN</div>
+  <h2 class="sec-title">EDUCACIÓN</h2>
+  <div class="timeline fadein">
+    <div class="tline-item">
+      <div class="tline-date">Mar 2026<br> Jun 2026</div>
+      <div class="tline-body">
+        <div class="tline-company">Generation Colombia · Bogotá</div>
+        <div class="tline-role">JUNIOR FULL-STACK / JAVA DEVELOPER</div>
+        <p class="tline-desc">Programa intensivo de desarrollo Full Stack con enfoque en Java y Spring Boot.</p>
+      </div>
+    </div>
+    <div class="tline-item">
+      <div class="tline-date">Nov 2021<br> Mar 2022</div>
+      <div class="tline-body">
+        <div class="tline-company">Educamás · Simplonline Colombia · Bogotá</div>
+        <div class="tline-role">DESARROLLO WEB FRONT-END</div>
+        <p class="tline-desc">Formación en desarrollo web frontend con HTML, CSS, JavaScript y herramientas modernas del ecosistema web.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-label">04 // PROYECTOS</div>
+  <h2 class="sec-title">MI TRABAJO</h2>
+  <div class="projects-grid">
+
+    <div class="pcard fadein">
+      <div class="pcard-thumb"><img src="images/flores.png" alt="Flores del Tambo"></div>
+      <div class="pcard-body">
+        <div class="ptags"><span class="ptag">REACT</span><span class="ptag">NODE.JS</span><span class="ptag">EXPRESS</span><span class="ptag">MONGODB</span></div>
+        <h3 class="ptitle">FLORES DEL TAMBO</h3>
+        <p class="pdesc">App Full Stack MERN. Permite agregar, editar y eliminar tareas y ver la lista completa en tiempo real.</p>
+        <div class="plinks">
+          <a href="https://mern-flores-tambo.herokuapp.com/" target="_blank" class="plink">LIVE →</a>
+          <a href="https://github.com/yulybeltran/Flores-del-tambo.git" target="_blank" class="plink">GITHUB →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard fadein">
+      <div class="pcard-thumb"><img src="images/cakeandart.png" alt="Cake and Art"></div>
+      <div class="pcard-body">
+        <div class="ptags"><span class="ptag">REACT</span><span class="ptag">CARRITO DE COMPRAS</span></div>
+        <h3 class="ptitle">CAKE AND ART</h3>
+        <p class="pdesc">Donación a un emprendimiento. E-commerce en React con carrito de compras funcional para comercializar productos.</p>
+        <div class="plinks">
+          <a href="https://cakeandart.netlify.app/" target="_blank" class="plink">LIVE →</a>
+          <a href="https://github.com/yulybeltran/cake-and-art" target="_blank" class="plink">GITHUB →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard fadein">
+      <div class="pcard-thumb"><img src="images/rick.png" alt="Rick and Morty"></div>
+      <div class="pcard-body">
+        <div class="ptags"><span class="ptag">REACT</span><span class="ptag">API EXTERNA</span></div>
+        <h3 class="ptitle">RICK AND MORTY</h3>
+        <p class="pdesc">Aplicación React que consume la API pública de Rick and Morty. Proyecto de consumo de APIs externas.</p>
+        <div class="plinks">
+          <a href="https://my-api-rick-and-morty.netlify.app/" target="_blank" class="plink">LIVE →</a>
+          <a href="https://github.com/yulybeltran/My-app" target="_blank" class="plink">GITHUB →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard fadein">
+      <div class="pcard-thumb"><img src="images/ahorcadoD.png" alt="Juego del Ahorcado"></div>
+      <div class="pcard-body">
+        <div class="ptags"><span class="ptag">JAVASCRIPT</span><span class="ptag">TRABAJO EN EQUIPO</span></div>
+        <h3 class="ptitle">JUEGO DEL AHORCADO</h3>
+        <p class="pdesc">Primer proyecto en JavaScript, desarrollado en equipo. Juego clásico del ahorcado con interfaz interactiva.</p>
+        <div class="plinks">
+          <a href="https://royman56.github.io/juego_js/" target="_blank" class="plink">LIVE →</a>
+          <a href="https://github.com/yulybeltran/Juego-del--ahorcado.git" target="_blank" class="plink">GITHUB →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard fadein">
+      <div class="pcard-thumb"><img src="images/tetrisD.png" alt="Juego Tetris"></div>
+      <div class="pcard-body">
+        <div class="ptags"><span class="ptag">JAVASCRIPT</span></div>
+        <h3 class="ptitle">JUEGO TETRIS</h3>
+        <p class="pdesc">Segundo proyecto con JavaScript. Implementación del Tetris con lógica de colisiones y sistema de puntaje.</p>
+        <div class="plinks">
+          <a href="https://yulybeltran.github.io/juego_tetris/" target="_blank" class="plink">LIVE →</a>
+          <a href="https://github.com/yulybeltran/juego_tetris.git" target="_blank" class="plink">GITHUB →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard fadein">
+      <div class="pcard-thumb"><img src="images/pijama_rayas.png" alt="Web Tributo"></div>
+      <div class="pcard-body">
+        <div class="ptags"><span class="ptag">HTML</span><span class="ptag">CSS</span></div>
+        <h3 class="ptitle">WEB TRIBUTO</h3>
+        <p class="pdesc">Homenaje a "El niño con el pijama de rayas". Primer proyecto de maquetación con HTML y CSS.</p>
+        <div class="plinks">
+          <a href="https://marcelabeltranr.github.io/web_tributo/" target="_blank" class="plink">LIVE →</a>
+          <a href="https://github.com/marcelabeltranr/web_tributo.git" target="_blank" class="plink">GITHUB →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-label">05 // HABILIDADES</div>
+  <h2 class="sec-title">MI STACK</h2>
+  <div class="skills-wrap fadein">
+    <div class="skill-cat">
+      <div class="skill-cat-title">// Frontend</div>
+      <div class="skill-pills">
+        <div class="spill"><div class="sdot"></div>HTML5</div>
+        <div class="spill"><div class="sdot"></div>CSS3</div>
+        <div class="spill"><div class="sdot"></div>JavaScript</div>
+        <div class="spill"><div class="sdot"></div>React</div>
+        <div class="spill"><div class="sdot"></div>Figma</div>
+      </div>
+    </div>
+    <div class="skill-cat">
+      <div class="skill-cat-title">// Backend & Full Stack</div>
+      <div class="skill-pills">
+        <div class="spill"><div class="sdot"></div>Java</div>
+        <div class="spill"><div class="sdot"></div>Spring Boot</div>
+        <div class="spill"><div class="sdot"></div>Node.js</div>
+        <div class="spill"><div class="sdot"></div>Express</div>
+        <div class="spill"><div class="sdot"></div>MongoDB</div>
+        <div class="spill"><div class="sdot"></div>REST APIs</div>
+      </div>
+    </div>
+    <div class="skill-cat">
+      <div class="skill-cat-title">// Herramientas & Plataformas</div>
+      <div class="skill-pills">
+        <div class="spill"><div class="sdot"></div>Git & GitHub</div>
+        <div class="spill"><div class="sdot"></div>SAP Ariba</div>
+        <div class="spill"><div class="sdot"></div>SAP Fieldglass</div>
+        <div class="spill"><div class="sdot"></div>Azure DevOps</div>
+        <div class="spill"><div class="sdot"></div>Service Manager</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner fadein">
+    <div class="sec-label">06 // CONTACTO</div>
+    <h2 class="sec-title">HABLEMOS</h2>
+    <p class="contact-sub">¿Tienes un proyecto en mente o una oportunidad?<br>Escríbeme, estoy disponible para nuevos retos.</p>
+    <a href="mailto:yulybeltran082@gmail.com" class="contact-email">YULYBELTRAN082@GMAIL.COM</a>
+    <div class="contact-links">
+      <a href="mailto:yulybeltran082@gmail.com" class="clink">EMAIL</a>
+      <a href="https://github.com/yulybeltran" target="_blank" class="clink">⌥ GITHUB</a>
+      <a href="https://www.linkedin.com/in/desarrolladora-frontend-yuly-marcela-beltran-rodriguez-a4394a228/" target="_blank" class="clink">⌘ LINKEDIN</a>
+      <a href="tel:+573174185764" class="clink">◎ +57 317 418 57 64</a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="f-logo">MBR.DEV</span>
+  <span>© Todos los derechos reservados</span>
+  <span>YULY MARCELA BELTRÁN RODRÍGUEZ</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
